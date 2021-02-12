@@ -41,7 +41,11 @@ const renderers = {
     );
   },
   paragraph: ({ children }) => {
-    return <Text fontSize='1'>{children}</Text>;
+    return (
+      <Text fontSize='1' lineHeight={'20px'}>
+        {children}
+      </Text>
+    );
   },
   code: ({ language, value }) => {
     return (
@@ -116,7 +120,7 @@ export default function TextContent(props) {
     );
   } else {
     return (
-      <Text mx='2px'>
+      <Text>
         <MessageMarkdown source={content.text} />
       </Text>
     );
